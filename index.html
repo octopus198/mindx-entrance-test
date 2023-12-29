@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+    <title>Bài 1</title>
+
+</head>
+<body>
+    <h1>Tổng các số nguyên tố trong một khoảng bất kỳ</h1>
+        <div>
+            <label for="so-thu-nhat">Nhập số nguyên dương bất kỳ thứ nhất</label>
+            <input type="number" id = "start" min= "1" required>
+            <label for="so-thu-hai">Nhập số nguyên dương bất kỳ thứ hai</label>
+            <input type="number" id = "start" min= "1" required>
+            <br>
+            <button onclick="tinhTongSoNguyenTo()">Tính tổng số nguyên tố</button>
+            <pre id="ketQua"></pre>
+        </div>
+<script>
+    function tinhTongSoNguyenTo() {
+        const soThuNhat = parseInt(document.getElementById('so-thu-nhat').value);
+        const soThuHai = parseInt(document.getElementById('so-thu-hai').value);
+        let sum = 0;
+
+        for (let x = soThuNhat; x <= soThuHai; x++) {
+            if (isPrime(x)) {
+            sum += x;
+            }
+        }
+        document.getElementById('ketQua').innerText = `Tổng các số nguyên tố trong khoảng đã cho là ${sum}`;
+
+    }
+
+    function kiemTraSoNguyenTo(x) {
+      if (x < 2) {
+        return false;
+      }
+
+      for (let i = 2; i <= Math.sqrt(x); i++) {
+        if (x % i === 0) {
+          return false;
+        }
+      }
+
+      return true;
+    }
+</script>
+
+</body>
+</html>
