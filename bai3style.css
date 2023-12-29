@@ -1,0 +1,156 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+
+  #page-container {
+      margin-top: 70px;
+    margin-bottom: 70px;
+    margin-left: 50px;
+    margin-right: 50px;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+  }
+
+  header {
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 40px;
+    font-weight: bold;
+    padding: 10px;
+  }
+
+  section {
+    display: flex;
+  }
+
+  #search-bar {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+  }
+
+  #search-container {
+    display: flex;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    overflow: hidden;
+    width: 100%;
+  }
+
+  #search-input {
+    flex: 1;
+    padding: 8px;
+    border: none;
+  }
+
+  #search-icon {
+    padding: 8px;
+  }
+
+  nav {
+    flex: 2;
+    padding: 10px;
+    text-align: right;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    align-self: center; 
+  }
+
+  nav label {
+      font-size: 18px;
+      color: #43495b;
+    margin-right: 18px;
+    padding: 8px;
+    border-radius: 10px;
+    background-color: transparent;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+
+  nav label:hover {
+    background-color: #84a0ff;
+    border: 1px solid #84a0ff;
+  }
+
+  #user-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    padding: 10px;
+    flex-grow: 1;
+  }
+
+  .user-profile {
+    background-color: #fbfcff;
+    border-radius: 10px;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    text-align: left;
+    transition: border 0.3s, box-shadow 0.3s;
+  }
+
+  .user-profile:hover {
+    border: 1px solid #c9d2eb;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .user-picture {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin-right: 30px;
+    overflow: hidden;
+  }
+
+  
+
+  .user-picture img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .user-info {
+    flex: 1;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .user-info div {
+    margin-bottom: 10px;
+  }
+
+  .user-name {
+      font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+      font-size: 28px;
+      font-weight: bold;
+  }
+
+  .user-location {
+      font-size: 18px;
+      font-weight: lighter;
+  }
+
+  .user-keywords {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    justify-content: flex-start;
+  }
+
+  .keyword {
+    border: 1px solid #c7cee7;
+    border-radius: 50px;
+    padding: 7px;
+    margin-bottom: 5px;
+    width: fit-content;
+    color: #6680da;
+  }
+ 
